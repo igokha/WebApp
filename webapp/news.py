@@ -1,4 +1,6 @@
 import requests
+from datetime import datetime
+from webapp.model import db, News
 from bs4 import BeautifulSoup
 
 def get_html(url):
@@ -15,9 +17,6 @@ def get_html(url):
 #        if html:
 #            with open("python-org-news.html", "w", encoding="utf8") as f:
 #                f.write(html)
-#
-#                
-#
 
 def get_python_news():
     html = get_html("https://www.python.org/blogs/")
@@ -29,13 +28,25 @@ def get_python_news():
             title = n.find('a').text
             url = n.find('a')['href']
             published = n.find('time').text
-            news.append({
+            try:
+                published = datetime.strptime(published, '%Y-%m-%d')
+            except(ValueError):
+                published = datetime.now()
+            save_news(title, url, published)
+        """ news.append({
                 'title' : title,
                 'url' : url,
                 'published' : published
             })
-        return news
+        return news """
     return False
+
+def save_news(title, url, published):
+    news_exists = News.query.filter(News.url == url).count()
+    if not news_exists:
+        new_news = News(title=title, url=url, published=published)
+        db.session.add(new_news)
+        db.session.commit()
 
 if __name__ == "__main__":
     html = get_html("https://www.python.org/blogs/")
