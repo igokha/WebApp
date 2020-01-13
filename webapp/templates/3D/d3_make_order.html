@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class='row'>
+        <div class='col-3'>
+                <h4>Загрузите модель</h4> <br>
+        </div>
+    </div>
+<div class='row'>
+        <div class='col-3'>
+                <button type="button" class="btn btn-info btn-lg">Upload Model</button>
+                <br>
+        </div>
+</div>
+<div class='row'>
+        <div class='col-12'>
+            <br>
+        </div>
+    </div>
+<div class='row'>
+        <div class='col-3'>    
+            <form>
+                          <div class="form-group">
+                                <label for="exampleFormControlTextarea1">Укажите максимальную цену</label>
+                                <input type="text" class="form-control" id="inputPassword3" placeholder="Введите сумму в рублях">
+                              </div>
+            </form>
+        </div>
+</div>
+<div class='row'>
+        <div class='col-3'>    
+            <form>
+                          <div class="form-group">
+                                <label for="exampleFormControlTextarea1">Укажите срок изготовления</label>
+                                <input type="text" class="form-control" id="inputPassword3" placeholder="Введите кол-во дней">
+                               </div>
+            </form>
+        </div>
+</div>
+<div class='row'>
+        <div class='col-3'>    
+            <form>
+                          <div class="form-group">
+                                <label for="inputCity">Укажите локацию изготовителя</label>
+                                <select id="inputCity" class="form-control">
+                                  <option selected>Choose...</option>
+                                  <option>...</option>
+                                </select>
+                            </div>
+            </form>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+</div>
+<div class='row'>
+        <div class='col-3'>
+                <button type="button" class="btn btn-primary btn-lg">Сохранить заказ</button>
+        </div>
+</div>
+{% endblock %}  

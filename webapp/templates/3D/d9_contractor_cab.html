@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class='row'>
+        <div class='col-3'>    
+            <form>
+                <div class="form-group">
+                                <label for="inputCity">Готовность принять заказ</label> <br>
+                                <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                                <label class="form-check-label" for="inlineRadio1">Да</label>
+                                              </div>
+                                              <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                                <label class="form-check-label" for="inlineRadio2">Нет</label>
+                                              </div>
+                            </div>
+            </form>
+        </div>
+        <div class='col-9' align="right">
+                <button type="button" class="btn btn-secondary">Мои настройки</button>
+        </div>
+</div>
+<div class='row'>
+        <div class='col-3'>    
+            <form>
+                  <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Укажите срок изготовления</label>
+                        <input type="text" class="form-control" id="inputPassword3" placeholder="Введите кол-во дней">
+                      </div>
+            </form>
+        </div>
+</div>
+<div class='row'>
+        <div class='col-3'>    
+            <form>
+                <div class="form-group">
+                                <label for="exampleFormControlTextarea1">Укажите минимальную цену</label>
+                                <input type="text" class="form-control" id="inputPassword3" placeholder="Введите сумму в рублях">
+                              </div>
+            </form>
+            <br>
+            <br>
+        </div>
+</div>
+<div class='row'>
+                <div class='col-6'>
+                        <h2>Новые заказы</h2> <br>
+                </div>
+            </div>
+<div class='row'>
+        <div class='col-3'>
+                <button type="button" class="btn btn-info">Заказ 4</button>
+                <br>
+        </div>
+</div>
+<div class='row'>
+        <div class='col-12'>
+            <br>
+        </div>
+    </div>
+<div class='row'>
+        <div class='col-6'>
+                <h2>Принятые заказы</h2> <br>
+        </div>
+    </div>
+<div class='row'>
+        <div class='col-1' align="center">
+                <button type="button" class="btn btn-primary">Заказ 1</button>
+        </div>
+        <div class='col-1' align="center">
+                <button type="button" class="btn btn-primary">Заказ 2</button>
+        </div>
+        <div class='col-1' align="center">
+                <button type="button" class="btn btn-primary">Заказ 3</button>
+        </div>
+</div>
+{% endblock %}  
